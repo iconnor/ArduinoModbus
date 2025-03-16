@@ -365,7 +365,7 @@ int ModbusClient::requestFrom(int id, int type, int address, int nb)
   _read = 0;
   _availableForWrite = 0;
   _written = 0;
-
+  // Updated to return if status goes 0x5 for ack
   return result;
 }
 
